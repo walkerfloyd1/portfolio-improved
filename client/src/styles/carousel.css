@@ -1,0 +1,54 @@
+.carousel .thumb img {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.carousel .slide img {
+    border: 3px solid #0d0d0d;
+    height: 500px;  /* change this to whatever you want */
+    width: 600px;
+}
+
+.carousel .slide {
+    background-color: transparent;
+}
+
+.carousel {
+    width: 100%;
+    background-color: transparent;
+}
+
+.carousel .legend {
+    background-color: transparent;
+}
+
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    padding-top: 250px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1; 
+    width: 100%;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+  }
+  
+  .pic:hover .overlay {
+    opacity: 1;
+  }
+
+  .carousel .slide iframe {
+      border: 3px solid #0d0d0d;
+      background: #0d0d0d;
+  }
