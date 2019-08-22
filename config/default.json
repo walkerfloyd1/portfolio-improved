@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://walkerfloyd:walkerfloyd@cluster0-ndsnb.mongodb.net/test?retryWrites=true&w=majority",
+    "jwtSecret": "secretToken"
+}
