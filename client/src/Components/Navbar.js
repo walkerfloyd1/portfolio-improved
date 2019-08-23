@@ -20,7 +20,7 @@ const Menu = styled.div`
     text-transform: uppercase;
     fontFamily: "Raleway, sans-serif";
     font-size: 20px;
-    margin: 80px
+    margin: 50px
     color: black;
     &:hover {
       color: white;
@@ -49,11 +49,6 @@ class Navbar extends React.Component {
           menu={
             <Menu>
             <ul>
-            <li className="nav-item">
-                <Link to="/" className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}>
-                  Home
-                </Link>
-              </li>
               <li className="nav-item">
                 <Link to="/profile" className={window.location.pathname === "/profile" ? "nav-link active" : "nav-link"}>
                   Profile
@@ -83,6 +78,16 @@ class Navbar extends React.Component {
                   Photography
                 </Link>
              </li>
+             <li className="nav-item">
+                <Link to="/" className={window.location.pathname === "/social" ? "nav-link active" : "nav-link"}>
+                  Social
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/" className={window.location.pathname === "/info" ? "nav-link active" : "nav-link"}>
+                  My Account
+                </Link>
+              </li>
             </ul>
             </Menu>
           }
