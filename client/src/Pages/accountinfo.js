@@ -5,7 +5,7 @@ const AccountInfo = props => {
     return (
         <div>
             <h1>
-                If you are signed in, this is where your account info will be
+                Account info
             </h1>
         </div>
     )
