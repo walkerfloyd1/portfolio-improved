@@ -2,15 +2,19 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link, Switch, Redirect } from "react-router-dom";
 import './App.css';
 
-import Portfolio from './Pages/Portfolio';
+import Portfolio from './pages/portfolio';
 
-import Profile from './Pages/Profile';
+import Profile from './pages/profile';
 
-import Home from './Pages/Home';
+import Register from './pages/register';
 
-import Film from './Pages/filmmaking.js';
+import Login from './pages/login';
 
-import Photo from './Pages/photography.js';
+import Home from './pages/home';
+
+import Film from './pages/filmmaking.js';
+
+import Photo from './pages/photography.js';
 
 function App() {
   return (
@@ -21,6 +25,8 @@ function App() {
       <Route exact path="/film" component={Film} />
       <Route exact path="/photo" component={Photo} />
       <Route exact path="/" component={Home} />
+      <Route exact path="/login" component={Login} />
+      <Route exact path="/register" component={Register} />
     </Switch>
     </Router>
   );
