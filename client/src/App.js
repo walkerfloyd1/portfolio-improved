@@ -8,6 +8,8 @@ import Profile from './pages/profile';
 
 import Register from './pages/register';
 
+import Community from './pages/community';
+
 import Login from './pages/login';
 
 import Home from './pages/home';
@@ -27,6 +29,7 @@ function App() {
       <Route exact path="/" component={Home} />
       <Route exact path="/login" component={Login} />
       <Route exact path="/register" component={Register} />
+      <Route exact path="/community" component={Community} />
     </Switch>
     </Router>
   );

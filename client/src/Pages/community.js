@@ -3,18 +3,18 @@ import PropTypes from 'prop-types';
 
 //Only logged in users will be allowed to see this page
 
-const social = props => {
+const Community = props => {
     return (
         <div>
             <h1>
-                Social Landing page
+                Community Landing page
             </h1>
         </div>
     )
 }
 
-social.propTypes = {
+Community.propTypes = {
 
 }
 
-export default social
+export default Community;
