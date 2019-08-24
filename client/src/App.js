@@ -18,18 +18,23 @@ import Photo from './pages/photography.js';
 
 import AccountInfo from './pages/accountinfo';
 
+import Landing from './pages/Landing';
+
+import PrivateRoute from './routing/PrivateRoute';
+
 function App() {
   return (
     <Router>
     <Switch>
-      <Route exact path="/portfolio" component={Portfolio} />
-      <Route exact path="/" component={Profile} />
-      <Route exact path="/film" component={Film} />
-      <Route exact path="/photo" component={Photo} />
-      <Route exact path="/login" component={Login} />
-      <Route exact path="/register" component={Register} />
-      <Route exact path="/community" component={Community} />
-      <Route exact path="/info" component={AccountInfo} />
+      <Route exact path="/" component={Landing} />
+      <PrivateRoute exact path="/portfolio" component={Portfolio} />
+      <PrivateRoute exact path="/profile" component={Profile} />
+      <PrivateRoute exact path="/film" component={Film} />
+      <PrivateRoute exact path="/photo" component={Photo} />
+      <PrivateRoute exact path="/login" component={Login} />
+      <PrivateRoute exact path="/register" component={Register} />
+      <PrivateRoute exact path="/community" component={Community} />
+      <PrivateRoute exact path="/info" component={AccountInfo} />
     </Switch>
     </Router>
   );
