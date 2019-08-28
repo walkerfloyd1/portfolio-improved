@@ -66,9 +66,6 @@ async (req, res) => {
     if (status) {
         profileFields.status = status;
     };
-    if (githubusername) {
-        profileFields.githubusername = githubusername;
-    };
     if (skills) {
         profileFields.skills = skills.split(',').map(skill => skill.trim());
     }
@@ -158,30 +155,6 @@ router.delete('/', auth, async (req, res) => {
         console.error(err.message);
         res.status(500).send('Server Error')
     }
-})
-
-router.get('/github/:username', (req, res) => {
-    try {
-        const options = {
-            uri: `https://api.github.com/users/${req.params.username}/repos?per_page=5&sort=created:asc&client_id=${config.get('githubClientId')}&client_secret=${config.get('githubSecret')}`,
-            method: 'GET',
-            headers: {'user-agent': 'node.js'}
-        };
-
-        request(options, (error, response, body ) => {
-            if (error) {
-                console.error(error)
-            }
-            if (response.statusCode !== 200) {
-                return res.status(404).json({ msg: 'No Github Profile found'})
-            }
-
-            res.json(JSON.parse(body));
-        })
-    } catch (error) {
-        console.error(error.message);
-        res.status(500).send('Server error')
-    }
-})
+});
 
 module.exports = router;
