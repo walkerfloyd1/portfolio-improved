@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link, Switch, Redirect } from "react-router-dom";
 import './App.css';
 
+import { Provider } from 'react-redux';
+
 import Portfolio from './pages/portfolio';
 
 import Profile from './pages/profile';
@@ -22,8 +24,11 @@ import Landing from './pages/Landing';
 
 import PrivateRoute from './Components/social/routing/PrivateRoute';
 
+import store from './store';
+
 function App() {
   return (
+    <Provider store={store}>
     <Router>
     <Switch>
       <Route exact path="/" component={Landing} />
@@ -37,6 +42,7 @@ function App() {
       <PrivateRoute exact path="/info" component={AccountInfo} />
     </Switch>
     </Router>
+    </Provider>
   );
 }
 
