@@ -13,7 +13,7 @@ router.post('/', [
     check('password', 'Please enter a password that is at least 7 characters').isLength({ min: 7}),
 ], async (req, res) => {
     const errors = validationResult(req);
-    if (errors) {
+    if (!errors.isEmpty()) {
         return res.status(400).json({
             errors: errors.array()
         })
@@ -22,7 +22,8 @@ router.post('/', [
     const {
         name,
         email,
-        password
+        password,
+        //image
     } = req.body;
 
     try {
@@ -40,12 +41,13 @@ router.post('/', [
     user = new User({
         name,
         email,
-        password
+        password,
+        //image
     })
     
     const salt = await bcrypt.genSalt(10);
 
-    user.password = await bcrypt.hash(password, salt);
+    user.password = await bcrypt.hash(password,salt);
 
     await user.save();
 

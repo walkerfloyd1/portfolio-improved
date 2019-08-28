@@ -9,14 +9,10 @@ connectDB();
 
 app.use(express.json({ extended: false }));
 
-// Define routes
-
 app.use('/api/users', require('./routes/users'));
 app.use('/api/auth', require('./routes/auth'));
-// app.use('/api/profile', require('./routes/profile'));
-// app.use('/api/posts', require('./routes/posts'));
-
-// Serve static assets in production
+app.use('/api/profile', require('./routes/profile'));
+app.use('/api/posts', require('./routes/posts'));
 
 if(process.env.NODE_ENV === 'production') {
     //set static folder
@@ -27,6 +23,6 @@ if(process.env.NODE_ENV === 'production') {
     })
 }
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => console.log("Server started"));
