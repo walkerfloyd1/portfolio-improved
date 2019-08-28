@@ -1,5 +1,5 @@
 {
-  "name": "my-portfolio",
+  "name": "client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -66,18 +66,5 @@
       "last 1 safari version"
     ]
   },
-  "main": "index.js",
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/walkerfloyd1/my-new-repository.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/walkerfloyd1/my-new-repository/issues"
-  },
-  "homepage": "https://github.com/walkerfloyd1/my-new-repository#readme",
-  "description": ""
+  "proxy": "http://localhost:3000"
 }

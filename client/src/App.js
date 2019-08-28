@@ -20,7 +20,7 @@ import AccountInfo from './pages/accountinfo';
 
 import Landing from './pages/Landing';
 
-import PrivateRoute from './routing/PrivateRoute';
+import PrivateRoute from './Components/social/routing/PrivateRoute';
 
 function App() {
   return (
