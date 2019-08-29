@@ -43,10 +43,10 @@ const Register = ({
                 password
             })
         }
+    }
 
-        if(isAuthenticated) {
-            return <Redirect to="/profile" />
-        }
+    if(isAuthenticated) {
+        return <Redirect to="/login" />
     }
     return (
         <Fragment>
