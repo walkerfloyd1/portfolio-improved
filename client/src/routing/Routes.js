@@ -12,6 +12,8 @@ import Photo from '../pages/photography.js';
 import AccountInfo from '../pages/accountinfo';
 import CreateProfile from '../Components/social/profile-forms/CreateProfile';
 
+//temporarily turning off authentication to design pages
+
 const Routes = props => {
     return (
         <section className="container">
@@ -24,7 +26,7 @@ const Routes = props => {
           <PrivateRoute exact path="/film" component={Film} />
           <PrivateRoute exact path="/photo" component={Photo} />
           <PrivateRoute exact path="/community" component={Community} />
-          <PrivateRoute exact path="/myaccount" component={AccountInfo} />
+          <PrivateRoute exact path="/my-profile" component={AccountInfo} />
           <PrivateRoute exact path="/create-profile" component={CreateProfile} />
         </Switch>
       </section>

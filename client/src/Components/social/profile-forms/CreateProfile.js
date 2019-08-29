@@ -10,7 +10,6 @@ const CreateProfile = ({
 }) => {
     const [formData, setFormData] = useState({
         location: '',
-        status: '',
         bio: '',
         twitter: '',
         facebook: '',
@@ -21,7 +20,6 @@ const CreateProfile = ({
 
     const {
         location,
-        status,
         bio,
         twitter,
         facebook,
