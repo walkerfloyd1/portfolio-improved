@@ -10,6 +10,7 @@ import Login from '../pages/login';
 import Film from '../pages/filmmaking.js';
 import Photo from '../pages/photography.js';
 import AccountInfo from '../pages/accountinfo';
+import CreateProfile from '../Components/social/profile-forms/CreateProfile';
 
 const Routes = props => {
     return (
@@ -19,11 +20,12 @@ const Routes = props => {
           <Route exact path="/register" component={Register} />
           <Route exact path="/login" component={Login} />
           <PrivateRoute exact path="/portfolio" component={Portfolio} />
-        <PrivateRoute exact path="/profile" component={Profile} />
-        <PrivateRoute exact path="/film" component={Film} />
-        <PrivateRoute exact path="/photo" component={Photo} />
-        <PrivateRoute exact path="/community" component={Community} />
-        <PrivateRoute exact path="/myaccount" component={AccountInfo} />
+          <PrivateRoute exact path="/profile" component={Profile} />
+          <PrivateRoute exact path="/film" component={Film} />
+          <PrivateRoute exact path="/photo" component={Photo} />
+          <PrivateRoute exact path="/community" component={Community} />
+          <PrivateRoute exact path="/myaccount" component={AccountInfo} />
+          <PrivateRoute exact path="/create-profile" component={CreateProfile} />
         </Switch>
       </section>
     )

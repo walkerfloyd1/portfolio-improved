@@ -40,7 +40,7 @@ const Navbar = ({
       </li>
       <li>
         <Link to="/myaccount">
-          My Account
+          My Profile
           </Link>
       </li>
       <li>
