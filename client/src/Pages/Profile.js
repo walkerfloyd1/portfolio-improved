@@ -16,7 +16,6 @@ class Profile extends Component {
     render() {
         return (
             <div>
-                <Navbar />
                 <div class="container">
                         <Bio />
                 </div>

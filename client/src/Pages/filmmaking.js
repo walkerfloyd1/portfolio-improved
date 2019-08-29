@@ -10,7 +10,6 @@ class Film extends Component {
     render() {
         return (
             <div>
-            <Navbar />
             <ControlledCarousel />
             <Footer />
             </div>

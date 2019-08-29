@@ -10,7 +10,6 @@ class Portfolio extends Component {
     render() {
         return (
             <div>
-                <Navbar />
                 <PortfolioContainer />
                 <Footer />
             </div>
