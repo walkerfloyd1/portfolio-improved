@@ -4,6 +4,10 @@ import { connect } from 'react-redux';
 import { getPosts } from '../Components/social/redux/post';
 import PostItem from '../Components/social/posts/PostItem';
 import PostForm from '../Components/social/posts/PostForm';
+import CommentForm from '../Components/social/post/CommentForm';
+import CommentItem from '../Components/social/post/CommentItem';
+
+// Make it so comments only show up if you click on Comments
 
 const Posts = ({
     getPosts,
@@ -28,8 +32,16 @@ const Posts = ({
             </p>
             <PostForm />
             <div className="posts">
-                { posts.map(post => (
+                {posts.map(post => (
+                    <div>
                     <PostItem key={post._id} post={post} />
+                    <div className="comments">
+                        {post.comments.map(comment => (
+                        <CommentItem key={comment._id} comment={comment} postId={post._id} />
+                        ))}
+                    </div>
+                    <CommentForm postId={post._id} />
+                    </div>
                 ))}
             </div>
         </Fragment>
