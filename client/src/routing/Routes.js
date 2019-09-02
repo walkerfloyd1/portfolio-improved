@@ -11,6 +11,7 @@ import Film from '../pages/filmmaking.js';
 import Photo from '../pages/photography.js';
 import AccountInfo from '../pages/accountinfo';
 import CreateProfile from '../Components/social/profile-forms/CreateProfile';
+import EditProfile from '../Components/social/profile-forms/EditProfile';
 
 //temporarily turning off authentication to design pages
 
@@ -28,6 +29,7 @@ const Routes = props => {
           <PrivateRoute exact path="/community" component={Community} />
           <PrivateRoute exact path="/my-profile" component={AccountInfo} />
           <PrivateRoute exact path="/create-profile" component={CreateProfile} />
+          <PrivateRoute exact path="/edit-profile" component={EditProfile} />
         </Switch>
       </section>
     )
