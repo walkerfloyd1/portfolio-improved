@@ -1,18 +1,12 @@
 import React, { Component } from 'react';
 
-import Navbar from '../Components/Navbar';
-
 import '../styles/profile.css';
 
 import Bio from '../Components/bio'
 
-import ProfileImage from '../Components/imageContainer';
-
-import { ProfileContainer } from '../Components/ProfileContainer';
-
 import Footer from '../Components/Footer';
 
-class Profile extends Component {
+class About extends Component {
     render() {
         return (
             <div>
@@ -25,4 +19,4 @@ class Profile extends Component {
     }
 }
 
-export default Profile;
+export default About;

@@ -7,13 +7,16 @@ import { getProfiles } from '../redux/profile';
 const Profiles = ({
     getProfiles,
     profile: {
-        profiles
+        profiles,
+        loading
     }
 }) => {
     useEffect(() => {
         getProfiles()
     }, [getProfiles])
-    return (
+    return loading ? <h1>
+        Loading
+    </h1> : (
         <Fragment>
             <h1 className="large text-primary">
                     Developers

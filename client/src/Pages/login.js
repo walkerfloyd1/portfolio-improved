@@ -30,7 +30,7 @@ const Login = ({
     }
 
     if (isAuthenticated) {
-        return <Redirect to="/profile" />
+        return <Redirect to="/about" />
     }
     return (
         <Fragment>

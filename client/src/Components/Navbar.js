@@ -34,7 +34,7 @@ const Navbar = ({
           </Link>
       </li>
       <li>
-        <Link to="/community">
+        <Link to="/posts">
           Community
           </Link>
       </li>
