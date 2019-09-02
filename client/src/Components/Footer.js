@@ -47,7 +47,7 @@ const bottomFooter = () => {
         
     </Grid>
     <Grid item sm={3}>
-    <a href="mailto:walkerkeatley@yahoo.com"><FaEnvelope style={{
+    <a href="mailto:walkerfloydprofessional@gmail.com"><FaEnvelope style={{
         color: "#33adff"
     }}/></a>
         </Grid>
