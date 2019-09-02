@@ -31,8 +31,8 @@ router.get('/me', auth, async (req, res) => {
 // @desc Create or update user profile
 // @access Private
 router.post('/', [ auth, [
-    check('status', 'Status is required').not().isEmpty(),
-    check('skills', 'Skills is required').not().isEmpty()
+    check('location', 'Status is required').not().isEmpty(),
+    check('bio', 'Skills is required').not().isEmpty()
 ]], 
 async (req, res) => {
     const errors = validationResult(req);

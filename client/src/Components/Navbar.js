@@ -39,7 +39,7 @@ const Navbar = ({
           </Link>
       </li>
       <li>
-        <Link to="/myaccount">
+        <Link to="/my-profile">
           My Profile
           </Link>
       </li>
