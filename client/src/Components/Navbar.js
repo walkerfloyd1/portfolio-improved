@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { logout } from '../redux/auth';
+import { logout } from './social/redux/auth';
 
 const Navbar = ({
   auth: {
@@ -93,65 +93,3 @@ const mapStateToProps = state => ({
 })
 
 export default connect( mapStateToProps, { logout })(Navbar);
-
-// class Navbar extends React.Component {
-
-//     render(){
-//       return (
-//         <ResponsiveMenu
-//           menuOpenButton={<div />}
-//           menuCloseButton={<div />}
-//           changeMenuOn="800px"
-//           largeMenuClassName="large-menu-classname"
-//           smallMenuClassName="small-menu-classname"
-//           menu={
-//             <Menu>
-//             <ul>
-//               <li className="nav-item">
-//                 <Link to="/profile" className={window.location.pathname === "/profile" ? "nav-link active" : "nav-link"}>
-//                   About
-//                 </Link>
-//               </li>
-//               <li className="nav-item">
-//                 <Link
-//                   to="/portfolio"
-//                   className={window.location.pathname === "/portfolio" ? "nav-link active" : "nav-link"}
-//                 >
-//                   Coding
-//                 </Link>
-//              </li>
-//              <li className="nav-item">
-//                 <Link
-//                   to="/film"
-//                   className={window.location.pathname === "/film" ? "nav-link active" : "nav-link"}
-//                 >
-//                   Film
-//                 </Link>
-//              </li>
-//              <li className="nav-item">
-//                 <Link
-//                   to="/photo"
-//                   className={window.location.pathname === "/photo" ? "nav-link active" : "nav-link"}
-//                 >
-//                   Photography
-//                 </Link>
-//              </li>
-//              <li className="nav-item">
-//                 <Link to="/community" className={window.location.pathname === "/social" ? "nav-link active" : "nav-link"}>
-//                   Social
-//                 </Link>
-//               </li>
-//               <li className="nav-item">
-//                 <Link to="/info" className={window.location.pathname === "/info" ? "nav-link active" : "nav-link"}>
-//                   My Account
-//                 </Link>
-//               </li>
-//             </ul>
-//             </Menu>
-//           }
-//           />  
-//       );
-//     }
-//   }
-  
-//   export default Navbar;

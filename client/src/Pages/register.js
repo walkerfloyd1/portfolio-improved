@@ -1,8 +1,8 @@
 import React, { Fragment, useState } from 'react';
 import { connect } from 'react-redux';
 import { Link, Redirect } from 'react-router-dom';
-import { setAlert } from '../redux/alert';
-import { register } from '../redux/auth';
+import { setAlert } from '../Components/social/redux/alert';
+import { register } from '../Components/social/redux/auth';
 import PropTypes from 'prop-types'
 
 const Register = ({

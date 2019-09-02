@@ -1,7 +1,7 @@
 import React, { useState, Fragment, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { createProfile, getCurrentProfile } from '../../../redux/profile';
+import { createProfile, getCurrentProfile } from '../redux/profile';
 import { Link, withRouter } from 'react-router-dom';
 
 const EditProfile = ({

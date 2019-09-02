@@ -6,13 +6,11 @@ import { Provider } from 'react-redux';
 
 import Landing from './pages/Landing';
 
-import PrivateRoute from './routing/PrivateRoute';
-
 import Routes from './routing/Routes';
 
 import Navbar from './Components/Navbar';
 
-import { loadUser } from './redux/auth';
+import { loadUser } from './Components/social/redux/auth';
 
 import setAuthToken from './utils/setAuthToken';
 

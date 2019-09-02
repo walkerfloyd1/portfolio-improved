@@ -1,7 +1,7 @@
 import React, { useState, Fragment} from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { createProfile } from '../../../redux/profile';
+import { createProfile } from '../redux/profile';
 import { Link, withRouter } from 'react-router-dom';
 
 const CreateProfile = ({
