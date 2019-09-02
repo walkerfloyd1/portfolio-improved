@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router';
 import Alert from '../Components/Alert';
 import PrivateRoute from './PrivateRoute';
 import Portfolio from '../pages/portfolio';
-import Profile from '../pages/profile';
+import Profile from '../pages/about';
 import Register from '../pages/register';
 import Community from '../pages/community';
 import Login from '../pages/login';
