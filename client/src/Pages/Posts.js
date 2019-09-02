@@ -1,9 +1,9 @@
 import React, { Fragment, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { getPosts } from '../redux/post';
-import PostItem from './PostItem';
-import PostForm from './PostForm';
+import { getPosts } from '../Components/social/redux/post';
+import PostItem from '../Components/social/posts/PostItem';
+import PostForm from '../Components/social/posts/PostForm';
 
 const Posts = ({
     getPosts,
