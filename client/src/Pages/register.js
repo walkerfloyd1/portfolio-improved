@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import { Link, Redirect } from 'react-router-dom';
 import { setAlert } from '../Components/social/redux/alert';
 import { register } from '../Components/social/redux/auth';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+import { Container } from '../Components/styling-components/Container';
 
 const Register = ({
     setAlert,
@@ -49,7 +50,7 @@ const Register = ({
         return <Redirect to="/login" />
     }
     return (
-        <Fragment>
+        <Container>
             <h1>
                 Register
             </h1>
@@ -101,7 +102,7 @@ const Register = ({
             <p>
                 Already have an account? <Link to="/login">Sign In</Link>
             </p>
-        </Fragment>
+        </Container>
     )
 }
 

@@ -3,7 +3,7 @@ import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { login } from '../Components/social/redux/auth';
-import Spotify from '../Components/spotify/Spotify';
+import { Container } from '../Components/styling-components/Container';
 
 
 const Login = ({
@@ -34,7 +34,7 @@ const Login = ({
         return <Redirect to="/about" />
     }
     return (
-        <Fragment>
+        <Container>
             <h1>
                 Login
             </h1>
@@ -64,7 +64,7 @@ const Login = ({
             <p>
                 Don't have an account? <Link to="/register">Sign up</Link>
             </p>
-        </Fragment>
+        </Container>
     )
 }
 
