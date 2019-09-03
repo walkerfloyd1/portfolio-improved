@@ -13,9 +13,7 @@ class About extends Component {
         return (
             <div>
                 <Navbar />
-                <div class="container">
                         <Bio />
-                </div>
                 <Footer />
             </div>
         )

@@ -11,6 +11,7 @@ const Menu = styled.div`
     display: inline-block;
     font-size: 13px;
     margin-left: 30px;
+    top: 20%;
   }
   a {
     text-decoration: none;

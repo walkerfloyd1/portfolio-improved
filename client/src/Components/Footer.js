@@ -17,12 +17,16 @@ import { FaPhone } from 'react-icons/fa';
 const bottomFooter = () => {
   return (
 <div>
-    <Footer
-        bgColor={"black"}
-        textStyle={{ color: "yellow", fontSize: 20, fontFamily: "Michroma"}}
-        width={425}
-        height={150}
-        text={
+    <div className="footer"
+        style={{
+            backgroundColor: "black",
+            position: "fixed",
+            left: "0",
+            bottom: "0",
+            width: "100%",
+            textAlign: "center"
+        }}
+        >
     <Grid container
             spacing={10}
             direction="row"
@@ -52,8 +56,8 @@ const bottomFooter = () => {
     }}/></a>
         </Grid>
     </IconContext.Provider>
-        </Grid>}
-        />
+        </Grid>
+        </div>
 </div>
   );
 }
