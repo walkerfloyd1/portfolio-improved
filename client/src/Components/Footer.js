@@ -1,10 +1,6 @@
 import React from "react";
 
-import ReactDOM from 'react-dom';
-
 import Grid from '@material-ui/core/Grid';
-
-import Footer from "react-footer-comp";
 
 import { IconContext } from "react-icons";
 

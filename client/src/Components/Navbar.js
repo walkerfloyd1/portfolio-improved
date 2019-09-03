@@ -6,12 +6,25 @@ import { logout } from './social/redux/auth';
 import styled from 'styled-components';
 
 const Menu = styled.div`
+  width: 100%;
   
+  ul {
+    text-align: center;
+    align-items: center;
+    position: fixed;
+    top: 30px;
+    left: 50%
+    transform: translate(-50%, -50%)
+    
+  }
   li {
     display: inline-block;
     font-size: 13px;
-    margin-left: 30px;
-    top: 20%;
+    margin-left: 20px;
+    align: center;
+    paddingBottom: 100px;
+    left: 50%
+    transform: translate(-50%, -50%)
   }
   a {
     text-decoration: none;
