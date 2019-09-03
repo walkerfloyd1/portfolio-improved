@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getPosts } from '../Components/social/redux/post';
@@ -20,6 +20,11 @@ const Posts = ({
         getPosts();
     }, [getPosts])
 
+    const [
+        displayComments,
+    ] = useState(false);
+
+
     return loading ? <h1>
         Loading
     </h1> : (
@@ -35,11 +40,12 @@ const Posts = ({
                 {posts.map(post => (
                     <div>
                     <PostItem key={post._id} post={post} />
+                    {displayComments && 
                     <div className="comments">
                         {post.comments.map(comment => (
                         <CommentItem key={comment._id} comment={comment} postId={post._id} />
                         ))}
-                    </div>
+                    </div> }
                     <CommentForm postId={post._id} />
                     </div>
                 ))}
