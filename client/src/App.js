@@ -9,7 +9,7 @@ import Landing from './pages/Landing';
 
 import Routes from './routing/Routes';
 
-import Navbar from './Components/Navbar';
+
 
 import { loadUser } from './Components/social/redux/auth';
 
@@ -29,7 +29,6 @@ const App = () => {
     <Provider store={store}>
     <Router>
       <Fragment>
-        <Navbar />
       <Switch>
         <Route exact path="/" component={Landing} />
         <Route component={Routes} />

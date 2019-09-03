@@ -3,6 +3,34 @@ import { Link } from "react-router-dom";
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { logout } from './social/redux/auth';
+import styled from 'styled-components';
+
+const Menu = styled.div`
+  
+  li {
+    display: inline-block;
+    font-size: 13px;
+    margin-left: 30px;
+  }
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: black;
+    &:hover {
+      color: white;
+      border-bottom: 1px solid
+    }
+  }
+  @media (max-width: 500px) {
+    padding: 10px 0;
+    li {
+      padding: 10px 0;
+      display: block;
+      margin-left: 0;
+    }
+  }
+`;
 
 const Navbar = ({
   auth: {
@@ -67,19 +95,13 @@ const Navbar = ({
   )
 
   return (
-    <nav className="navbar bg-dark">
-      <h1>
-        <Link to="/">
-        <i className="fas fa-code" />
-        Walker Floyd Portfolio
-        </Link>
-      </h1>
+    <Menu>
       { !loading && (
         <Fragment>
           {isAuthenticated ? authLinks : guestLinks }
         </Fragment>
       )}
-    </nav>
+    </Menu>
   )
 }
 
