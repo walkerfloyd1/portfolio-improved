@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router';
+import { Switch } from 'react-router';
 import Alert from '../Components/Alert';
 import PrivateRoute from './PrivateRoute';
 import Portfolio from '../pages/portfolio';
@@ -21,7 +21,7 @@ const Routes = props => {
         <Alert />
         <Switch>
           <PrivateRoute exact path="/profiles" component={Profiles} />
-          <Route exact path="/about" component={About} />
+          <PrivateRoute exact path="/about" component={About} />
           <PrivateRoute exact path="/profile/:id" component={UserProfile} />
           <PrivateRoute exact path="/portfolio" component={Portfolio} />
           <PrivateRoute exact path="/posts" component={Posts} />

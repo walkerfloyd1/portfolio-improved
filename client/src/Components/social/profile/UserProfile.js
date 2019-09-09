@@ -6,6 +6,8 @@ import { getProfileById } from '../redux/profile';
 import UserProfileTop from './UserProfileTop';
 import UserAbout from './UserAbout';
 
+import Navbar from '../../Navbar';
+
 const UserProfile = ({
     getProfilebyId,
     match,
@@ -20,9 +22,14 @@ const UserProfile = ({
     }, [getProfileById])
     return (
         <Fragment>
-            {profile === null ? <Link to="/create-profile" className="btn btn-light">
+            {profile === null ? 
+            <div>
+            <Navbar />
+            <Link to="/create-profile" className="btn btn-light">
                 Create your Profile
-            </Link> : <Fragment>
+            </Link>
+            </div> : <Fragment>
+            <Navbar />
                 {/* //This is not working yet */}
             <Link to="/profiles" className="btn btn-light">
                 Back to Profiles

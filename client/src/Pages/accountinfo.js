@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Navbar from '../Components/Navbar';
 
+
 const AccountInfo = props => {
     return (
         <div>

@@ -14,7 +14,7 @@ const Menu = styled.div`
     
   }
   li {
-    display: inline-block;
+    display: inline;
     font-size: 13px;
     margin-left: 20px;
     align: center;

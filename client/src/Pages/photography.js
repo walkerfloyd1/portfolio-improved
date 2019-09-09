@@ -10,6 +10,7 @@ export default class Photo extends Component {
     render() {
       return (
         <div>
+          <Navbar />
               <Photos />
             <Footer />
         </div>

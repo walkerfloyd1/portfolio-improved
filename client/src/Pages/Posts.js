@@ -6,6 +6,7 @@ import PostItem from '../Components/social/posts/PostItem';
 import PostForm from '../Components/social/posts/PostForm';
 import CommentForm from '../Components/social/post/CommentForm';
 import CommentItem from '../Components/social/post/CommentItem';
+import Navbar from '../Components/Navbar';
 
 // Make it so comments only show up if you click on Comments
 
@@ -28,6 +29,8 @@ const Posts = ({
     return loading ? <h1>
         Loading
     </h1> : (
+    <div>
+        <Navbar />
         <Fragment>
             <h1 className="large text-primary">
                 Community
@@ -51,6 +54,7 @@ const Posts = ({
                 ))}
             </div>
         </Fragment>
+    </div>
     )
 }
 

@@ -50,10 +50,11 @@ const Login = ({
                     value={email} 
                     style = {{
                         "border-radius": "6px",
-                        "border": "2px solid red",
+                        "border": "2px solid Roboto Mono, monospace",
                         "display": "block",
                         "margin": "0 0 1em",
-                        "padding": "6px"
+                        "padding": "6px",
+                        "font-family": "'Roboto Mono', monospace",
                     }}
                     onChange={e => onChange(e)} 
                     required/>
@@ -66,10 +67,11 @@ const Login = ({
                     minLength="6"
                     style = {{
                         "border-radius": "6px",
-                        "border": "2px solid red",
+                        "border": "2px solid Roboto Mono, monospace",
                         "display": "block",
                         "margin": "0 0 1em",
-                        "padding": "6px"
+                        "padding": "6px",
+                        "font-family": "'Roboto Mono', monospace",
                     }}
                     value={password} onChange={e => onChange(e)} required
                     />

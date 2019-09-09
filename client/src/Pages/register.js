@@ -66,10 +66,11 @@ const Register = ({
                     name="name" 
                     style = {{
                         "border-radius": "6px",
-                        "border": "2px solid red",
+                        "border": "2px solid Roboto Mono, monospace",
                         "display": "block",
                         "margin": "0 0 1em",
-                        "padding": "6px"
+                        "padding": "6px",
+                        "font-family": "'Roboto Mono', monospace",
                     }}
                     value={name} 
                     onChange={e => onChange(e)} 
@@ -82,10 +83,11 @@ const Register = ({
                     name="email" 
                     style = {{
                         "border-radius": "6px",
-                        "border": "2px solid red",
+                        "border": "2px solid Roboto Mono, monospace",
                         "display": "block",
                         "margin": "0 0 1em",
-                        "padding": "6px"
+                        "padding": "6px",
+                        "font-family": "'Roboto Mono', monospace",
                     }}
                     value={email} 
                     onChange={e => onChange(e)} 
@@ -97,10 +99,11 @@ const Register = ({
                     placeholder="Password"
                     style = {{
                         "border-radius": "6px",
-                        "border": "2px solid red",
+                        "border": "2px solid Roboto Mono, monospace",
                         "display": "block",
                         "margin": "0 0 1em",
-                        "padding": "6px"
+                        "padding": "6px",
+                        "font-family": "'Roboto Mono', monospace",
                     }}
                     name="password"
                     value={password} 
@@ -114,10 +117,11 @@ const Register = ({
                     name="password2"
                     style = {{
                         "border-radius": "6px",
-                        "border": "2px solid red",
+                        "border": "2px solid Roboto Mono, monospace",
                         "display": "block",
                         "margin": "0 0 1em",
-                        "padding": "6px"
+                        "padding": "6px",
+                        "font-family": "'Roboto Mono', monospace",
                     }}
                     value={password2} 
                     onChange={e => onChange(e)} 

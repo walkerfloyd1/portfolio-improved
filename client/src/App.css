@@ -101,7 +101,7 @@ img {
 }
 
 .text-primary {
-  color: var(--primary-color);
+  color: black;
 }
 
 .text-dark {
@@ -194,8 +194,9 @@ img {
 .bg-primary,
 .badge-primary,
 .alert-primary {
-  background: var(--primary-color);
+  background: black;
   color: #fff;
+  font-family: 'Roboto Mono', monospace;
 }
 
 .btn-light,
