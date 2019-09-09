@@ -8,6 +8,8 @@ import UserAbout from './UserAbout';
 
 import Navbar from '../../Navbar';
 
+import Footer from '../../Footer';
+
 const UserProfile = ({
     getProfilebyId,
     match,
@@ -28,6 +30,7 @@ const UserProfile = ({
             <Link to="/create-profile" className="btn btn-light">
                 Create your Profile
             </Link>
+            <Footer />
             </div> : <Fragment>
             <Navbar />
                 {/* //This is not working yet */}
@@ -51,8 +54,11 @@ const UserProfile = ({
                             </Fragment>
                         ) : (<h4>No Bio</h4>)}
                     </div>
+                    
                 </div>
-            </Fragment>}
+                <Footer />
+            </Fragment>
+        }
         </Fragment>
     )
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch } from 'react-router';
+import { Route, Switch } from 'react-router';
 import Alert from '../Components/Alert';
 import PrivateRoute from './PrivateRoute';
 import Portfolio from '../pages/portfolio';

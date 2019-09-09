@@ -16,7 +16,7 @@ const Navbar = ({
   const authLinks = (
     <ul>
       <li>
-        <Link to="/profile">
+        <Link to="/about">
           About
           </Link>
       </li>

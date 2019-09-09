@@ -7,7 +7,7 @@ const Menu = styled.div`
   ul {
     text-align: center;
     align-items: center;
-    position: fixed;
+    position: absolute;
     top: 30px;
     left: 50%
     transform: translate(-50%, -50%)

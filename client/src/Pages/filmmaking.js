@@ -26,9 +26,6 @@ class Film extends Component {
             >
                 <Grid item lg={9}>
             <Carousel showThumbs={false}>
-                {/* <div>
-                    <iframe src="https://player.vimeo.com/video/247003506" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                </div> */}
 <div>
 <iframe src="https://player.vimeo.com/video/196351548" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 </div>

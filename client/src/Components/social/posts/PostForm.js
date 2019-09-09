@@ -11,9 +11,6 @@ const PostForm = ({
 
     return (
         <div class="post-form">
-        <div class="bg-primary p">
-          <h3>Say Something...</h3>
-        </div>
         <form class="form my-1" onSubmit={e => {
             e.preventDefault();
             addPost({ text });
@@ -23,9 +20,13 @@ const PostForm = ({
             name="text"
             cols="30"
             rows="5"
-            placeholder="Create a post"
+            placeholder="What's on your mind?"
             required
             value={text}
+            style = {{
+              "width": "50%",
+              "border": "1px solid black",
+            }}
             onChange={e => setText(e.target.value)}
           ></textarea>
           <input type="submit" class="btn btn-dark my-1" value="Submit" />

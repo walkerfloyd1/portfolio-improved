@@ -7,6 +7,7 @@ import PostForm from '../Components/social/posts/PostForm';
 import CommentForm from '../Components/social/post/CommentForm';
 import CommentItem from '../Components/social/post/CommentItem';
 import Navbar from '../Components/Navbar';
+import Footer from '../Components/Footer';
 
 // Make it so comments only show up if you click on Comments
 
@@ -54,6 +55,7 @@ const Posts = ({
                 ))}
             </div>
         </Fragment>
+        <Footer />
     </div>
     )
 }
