@@ -51,6 +51,7 @@ const Register = ({
         return <Redirect to="/login" />
     }
     return (
+        <div className="register">
         <Container>
             <h1>
                 Register
@@ -104,6 +105,7 @@ const Register = ({
                 Already have an account? <Link to="/login">Sign In</Link>
             </p>
         </Container>
+        </div>
     )
 }
 

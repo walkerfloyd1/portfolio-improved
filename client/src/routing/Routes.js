@@ -4,8 +4,6 @@ import Alert from '../Components/Alert';
 import PrivateRoute from './PrivateRoute';
 import Portfolio from '../pages/portfolio';
 import About from '../pages/about';
-import Register from '../pages/register';
-import Login from '../pages/login';
 import Film from '../pages/filmmaking.js';
 import Photo from '../pages/photography.js';
 import UserProfile from '../Components/social/profile/UserProfile';
@@ -14,14 +12,14 @@ import EditProfile from '../Components/social/profile-forms/EditProfile';
 import Profiles from '../Components/social/profiles/Profiles';
 import Posts from '../pages/Posts';
 
+import '../App.css';
+
 
 const Routes = props => {
     return (
         <section className="container">
         <Alert />
         <Switch>
-          <Route exact path="/register" component={Register} />
-          <Route exact path="/login" component={Login} />
           <PrivateRoute exact path="/profiles" component={Profiles} />
           <Route exact path="/about" component={About} />
           <PrivateRoute exact path="/profile/:id" component={UserProfile} />

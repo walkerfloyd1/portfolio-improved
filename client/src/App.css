@@ -48,10 +48,10 @@
 }
 
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Roboto Mono', monospace;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: #fff;
+  background: #fff;
   color: #333;
 }
 
@@ -607,4 +607,23 @@ button {
   .post button {
     padding: 0.3rem 0.4rem;
   }
+}
+
+
+.landing {
+  background-color: gray;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.register {
+  background-color: blue;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.login {
+  background-color: green;
+  min-width: 100%;
+  min-height: 100%;
 }

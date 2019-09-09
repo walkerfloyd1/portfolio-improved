@@ -36,6 +36,7 @@ const Login = ({
         return <Redirect to="/about" />
     }
     return (
+    <div className="login">
         <Container>
             <h1>
                 Login
@@ -67,6 +68,7 @@ const Login = ({
                 Don't have an account? <Link to="/register">Sign up</Link>
             </p>
         </Container>
+        </div>
     )
 }
 

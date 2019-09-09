@@ -4,12 +4,13 @@ import './App.css';
 
 import { Provider } from 'react-redux';
 
+import Register from './pages/register';
+
+import Login from './pages/login';
 
 import Landing from './pages/Landing';
 
 import Routes from './routing/Routes';
-
-
 
 import { loadUser } from './Components/social/redux/auth';
 
@@ -30,6 +31,8 @@ const App = () => {
     <Router>
       <Fragment>
       <Switch>
+        <Route exact path="/register" component={Register} />
+        <Route exact path="/login" component={Login} />
         <Route exact path="/" component={Landing} />
         <Route component={Routes} />
       </Switch>

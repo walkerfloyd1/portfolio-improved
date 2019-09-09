@@ -12,7 +12,6 @@ const Landing = ({ isAuthenticated }) => {
   }
 
     return (
-            <section className="landing">
       <div className="dark-overlay">
         <div className="landing-inner">
           <h1 className="x-large">Walker Floyd Portfolio</h1>
@@ -22,8 +21,6 @@ const Landing = ({ isAuthenticated }) => {
           </div>
         </div>
       </div>
-    </section>
-
     )
 }
 
