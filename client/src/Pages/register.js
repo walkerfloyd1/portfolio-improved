@@ -5,7 +5,6 @@ import { setAlert } from '../Components/social/redux/alert';
 import { register } from '../Components/social/redux/auth';
 import PropTypes from 'prop-types';
 import { Container } from '../Components/styling-components/Container';
-import { InputStyled } from '../Components/styling-components/InputComponent';
 
 const Register = ({
     setAlert,
@@ -51,7 +50,7 @@ const Register = ({
         return <Redirect to="/login" />
     }
     return (
-        <div className="register">
+        <div className="dark-overlay">
         <Container>
             <h1>
                 Register
@@ -61,37 +60,65 @@ const Register = ({
             </p>
             <form onSubmit={e => onSubmit(e)}>
                 <div>
-                    <InputStyled 
+                    <input
                     type="text" 
                     placeholder="Name" 
                     name="name" 
+                    style = {{
+                        "border-radius": "6px",
+                        "border": "2px solid red",
+                        "display": "block",
+                        "margin": "0 0 1em",
+                        "padding": "6px"
+                    }}
                     value={name} 
                     onChange={e => onChange(e)} 
                     />
                 </div>
                 <div>
-                    <InputStyled 
+                    <input
                     type="email" 
                     placeholder="Email Address" 
                     name="email" 
+                    style = {{
+                        "border-radius": "6px",
+                        "border": "2px solid red",
+                        "display": "block",
+                        "margin": "0 0 1em",
+                        "padding": "6px"
+                    }}
                     value={email} 
                     onChange={e => onChange(e)} 
                     />
                 </div>
                 <div>
-                    <InputStyled
+                    <input
                     type="password"
                     placeholder="Password"
+                    style = {{
+                        "border-radius": "6px",
+                        "border": "2px solid red",
+                        "display": "block",
+                        "margin": "0 0 1em",
+                        "padding": "6px"
+                    }}
                     name="password"
                     value={password} 
                     onChange={e => onChange(e)} 
                     />
                 </div>
                 <div>
-                    <InputStyled
+                    <input
                     type="password"
                     placeholder="Confirm Password"
                     name="password2"
+                    style = {{
+                        "border-radius": "6px",
+                        "border": "2px solid red",
+                        "display": "block",
+                        "margin": "0 0 1em",
+                        "padding": "6px"
+                    }}
                     value={password2} 
                     onChange={e => onChange(e)} 
                     />

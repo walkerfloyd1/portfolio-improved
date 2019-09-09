@@ -7,7 +7,6 @@ const LinkCom = styled(Link)`
     display: block;
     margin: 0.5em 0;
     font-family: Helvetica, Arial, sans-serif;
-    background: black;
     margin: 20px;
     width: 100%;
     font-size: 30px;

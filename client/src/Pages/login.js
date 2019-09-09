@@ -5,8 +5,6 @@ import PropTypes from 'prop-types';
 import { login } from '../Components/social/redux/auth';
 import { Container } from '../Components/styling-components/Container';
 
-import { InputStyled } from '../Components/styling-components/InputComponent';
-
 
 const Login = ({
     login,
@@ -36,7 +34,7 @@ const Login = ({
         return <Redirect to="/about" />
     }
     return (
-    <div className="login">
+    <div className="dark-overlay">
         <Container>
             <h1>
                 Login
@@ -46,19 +44,33 @@ const Login = ({
             </p>
             <form onSubmit={e => onSubmit(e)}>
                 <div>
-                    <InputStyled type="email" 
+                    <input type="email" 
                     placeholder="Email Address" 
                     name="email" 
                     value={email} 
+                    style = {{
+                        "border-radius": "6px",
+                        "border": "2px solid red",
+                        "display": "block",
+                        "margin": "0 0 1em",
+                        "padding": "6px"
+                    }}
                     onChange={e => onChange(e)} 
                     required/>
                 </div>
                 <div>
-                    <InputStyled
+                    <input
                     type="password"
                     placeholder="Password"
                     name="password"
                     minLength="6"
+                    style = {{
+                        "border-radius": "6px",
+                        "border": "2px solid red",
+                        "display": "block",
+                        "margin": "0 0 1em",
+                        "padding": "6px"
+                    }}
                     value={password} onChange={e => onChange(e)} required
                     />
                 </div>
