@@ -1,7 +1,10 @@
 import React from 'react';
-import { Link, Redirect } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+
+import { RegisterLinkStyled } from '../Components/styling-components/RegisterLinkComponent';
+import { LoginLinkStyled } from '../Components/styling-components/LoginLinkComponent';
 
 const Landing = ({ isAuthenticated }) => {
   if (isAuthenticated) {
@@ -14,8 +17,8 @@ const Landing = ({ isAuthenticated }) => {
         <div className="landing-inner">
           <h1 className="x-large">Walker Floyd Portfolio</h1>
           <div className="buttons">
-            <Link to="/register" className="btn btn-primary">Register</Link>
-            <Link to="/login" className="btn btn-light">Login</Link>
+            <RegisterLinkStyled to="/register">Register</RegisterLinkStyled>
+            <LoginLinkStyled to="/login">Login</LoginLinkStyled>
           </div>
         </div>
       </div>
