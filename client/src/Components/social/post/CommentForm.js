@@ -21,6 +21,10 @@ const CommentForm = ({
             name="text"
             cols="30"
             rows="5"
+            style = {{
+              "width": "25%",
+              "height": "25%"
+            }}
             placeholder="Comment"
             required
             value={text}
