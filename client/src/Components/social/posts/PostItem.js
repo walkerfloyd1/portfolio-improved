@@ -9,6 +9,8 @@ import {
     deletePost
 } from '../redux/post';
 
+import ReactModal from 'react-modal';
+
 const PostItem = ({
     addLike,
     removeLike,
@@ -25,6 +27,7 @@ const PostItem = ({
         date
     }
 }) => {
+
     return (
         <div className="post bg-white p-1 my-1">
           <div>
@@ -56,7 +59,7 @@ const PostItem = ({
               <i className="fas fa-thumbs-down"></i>
             </button>
             <Link to={`/posts/${_id}`} className="btn btn-primary">
-              Comments {comments.length > 0 && (
+              Discussion {comments.length > 0 && (
                   <span className='comment-count'>{comments.length}</span>
               )}
             </Link>
