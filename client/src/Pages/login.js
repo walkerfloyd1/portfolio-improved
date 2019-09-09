@@ -5,6 +5,8 @@ import PropTypes from 'prop-types';
 import { login } from '../Components/social/redux/auth';
 import { Container } from '../Components/styling-components/Container';
 
+import { InputStyled } from '../Components/styling-components/InputComponent';
+
 
 const Login = ({
     login,
@@ -43,7 +45,7 @@ const Login = ({
             </p>
             <form onSubmit={e => onSubmit(e)}>
                 <div>
-                    <input type="email" 
+                    <InputStyled type="email" 
                     placeholder="Email Address" 
                     name="email" 
                     value={email} 
@@ -51,7 +53,7 @@ const Login = ({
                     required/>
                 </div>
                 <div>
-                    <input
+                    <InputStyled
                     type="password"
                     placeholder="Password"
                     name="password"

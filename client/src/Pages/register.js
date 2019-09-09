@@ -5,6 +5,7 @@ import { setAlert } from '../Components/social/redux/alert';
 import { register } from '../Components/social/redux/auth';
 import PropTypes from 'prop-types';
 import { Container } from '../Components/styling-components/Container';
+import { InputStyled } from '../Components/styling-components/InputComponent';
 
 const Register = ({
     setAlert,
@@ -59,7 +60,7 @@ const Register = ({
             </p>
             <form onSubmit={e => onSubmit(e)}>
                 <div>
-                    <input 
+                    <InputStyled 
                     type="text" 
                     placeholder="Name" 
                     name="name" 
@@ -68,7 +69,7 @@ const Register = ({
                     />
                 </div>
                 <div>
-                    <input 
+                    <InputStyled 
                     type="email" 
                     placeholder="Email Address" 
                     name="email" 
@@ -77,7 +78,7 @@ const Register = ({
                     />
                 </div>
                 <div>
-                    <input
+                    <InputStyled
                     type="password"
                     placeholder="Password"
                     name="password"
@@ -86,7 +87,7 @@ const Register = ({
                     />
                 </div>
                 <div>
-                    <input
+                    <InputStyled
                     type="password"
                     placeholder="Confirm Password"
                     name="password2"
