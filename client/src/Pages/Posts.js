@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { getPosts } from '../Components/social/redux/post';
 import PostItem from '../Components/social/posts/PostItem';
 import PostForm from '../Components/social/posts/PostForm';
-import CommentForm from '../Components/social/post/CommentForm';
 import CommentItem from '../Components/social/post/CommentItem';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
@@ -50,7 +49,6 @@ const Posts = ({
                         <CommentItem key={comment._id} comment={comment} postId={post._id} />
                         ))}
                     </div> }
-                    <CommentForm postId={post._id} />
                     </div>
                 ))}
             </div>
