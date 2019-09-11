@@ -4,6 +4,10 @@ import ProfileItem from './ProfileItem';
 import { connect } from 'react-redux';
 import { getProfiles } from '../redux/profile';
 
+import Navbar from '../../Navbar';
+
+import Footer from '../../Footer';
+
 const Profiles = ({
     getProfiles,
     profile: {
@@ -18,6 +22,7 @@ const Profiles = ({
         Loading
     </h1> : (
         <Fragment>
+            <Navbar />
             <h1 className="large text-primary">
                     Developers
                 </h1>
@@ -31,6 +36,7 @@ const Profiles = ({
                         ))
                     ) : (<h4>No Profiles found...</h4>)}
                 </div>
+                <Footer />
         </Fragment>
     )
 }

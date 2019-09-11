@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getProfileById } from '../redux/profile';
-import UserProfileTop from './UserProfileTop';
-import UserAbout from './UserAbout';
+
 
 import Navbar from '../../Navbar';
 
@@ -44,8 +43,6 @@ const UserProfile = ({
                 </Link>
             )}
             <div class="profile-grid my-1">
-                    <UserProfileTop profile={profile}/>
-                    <UserAbout profile={profile}/>
                     <div className="profile-exp bg-white p-2">
                         <h2 className="text-primary">Bio</h2>
                         {profile.bio ? (
