@@ -21,7 +21,7 @@ const Routes = props => {
         <section className="container">
         <Alert />
         <Switch>
-          <Route exact path="/profiles" component={Profiles} />
+          <PrivateRoute exact path="/profiles" component={Profiles} />
           <PrivateRoute exact path="/about" component={About} />
           <PrivateRoute exact path="/profile/:id" component={UserProfile} />
           <PrivateRoute exact path="/portfolio" component={Portfolio} />
