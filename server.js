@@ -8,6 +8,7 @@ const app = express();
 connectDB();
 
 app.use(express.json({ extended: false }));
+app.use(express.static(path.join(__dirname, '/client/build')));
 
 app.use('/api/users', require('./routes/users'));
 app.use('/api/auth', require('./routes/auth'));
