@@ -4,7 +4,7 @@ import './App.css';
 
 import { Provider } from 'react-redux';
 
-import Register from '../Components/pages/register';
+import Register from './pages/register';
 
 import Login from './pages/login';
 
