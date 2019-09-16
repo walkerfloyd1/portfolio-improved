@@ -9,7 +9,6 @@ import {
     deletePost
 } from '../redux/post';
 
-import ReactModal from 'react-modal';
 
 const PostItem = ({
     addLike,

@@ -11,6 +11,10 @@ import Footer from '../Components/Footer';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 
+import Grid from '@material-ui/core/Grid';
+
+import Container from '@material-ui/core/Container';
+
 // Make it so comments only show up if you click on Comments
 
 const Posts = ({
@@ -34,16 +38,27 @@ const Posts = ({
     </h1> : (
     <div>
         <Navbar />
-        <Fragment>
-            <h1 className="large text-primary">
-                Community
+        <Grid container
+            direction="column"
+            justify="center">
+            <h1 className="large text-primary" >
+                Community Feed
             </h1>
-            <p className="lead">
-                <i className="fas fa-user" /> See who's posting!
-            </p>
-            <PostForm />
-            <List className="posts" style={{
-                maxHeight: '200px',
+            <Grid item md={6}>
+                <PostForm style={{
+                    top: '25%',
+                    position: 'fixed'
+                }}/>
+            </Grid>
+            <Grid item md={6}>
+                <List className="posts" style={{
+                marginTop: '0px',
+                position: "fixed",
+                top: '25%',
+                left: '50%',
+                width: '600px',
+                marginRight: '10%',
+                maxHeight: '400px',
                 overflow: 'auto'
             }}>
                 {posts.map(post => (
@@ -58,7 +73,8 @@ const Posts = ({
                     </ListItem>
                 ))}
             </List>
-        </Fragment>
+            </Grid>  
+        </Grid>
         <Footer />
     </div>
     )

@@ -24,8 +24,8 @@ const PostForm = ({
             required
             value={text}
             style = {{
-              "width": "50%",
-              "border": "1px solid black",
+              "width": "75%",
+              "border": "1px gray",
             }}
             onChange={e => setText(e.target.value)}
           ></textarea>
