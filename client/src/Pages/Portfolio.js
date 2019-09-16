@@ -4,14 +4,14 @@ import Navbar from '../Components/Navbar';
 
 import Footer from '../Components/Footer';
 
-import PortfolioContainer from '../Components/PortfolioContainer'
+import GithubRepos from '../Components/GithubRepos'
 
 class Portfolio extends Component {
     render() {
         return (
             <div>
                 <Navbar />
-                <PortfolioContainer />
+                <GithubRepos />
                 <Footer />
             </div>
         )

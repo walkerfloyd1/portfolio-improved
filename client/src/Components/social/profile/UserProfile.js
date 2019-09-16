@@ -10,7 +10,7 @@ import Navbar from '../../Navbar';
 import Footer from '../../Footer';
 
 const UserProfile = ({
-    getProfilebyId,
+    getProfileById,
     match,
     auth,
     profile: {
@@ -23,7 +23,7 @@ const UserProfile = ({
     }, [getProfileById])
     return (
         <Fragment>
-            {profile === null ? 
+            {profile === null ? loading ? <h1> Loading </h1> :
             <div>
             <Navbar />
             <Link to="/create-profile" className="btn btn-light">

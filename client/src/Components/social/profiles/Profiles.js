@@ -4,9 +4,8 @@ import ProfileItem from './ProfileItem';
 import { connect } from 'react-redux';
 import { getProfiles } from '../redux/profile';
 
-import Navbar from '../../Navbar';
-
-import Footer from '../../Footer';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
 
 const Profiles = ({
     getProfiles,
@@ -22,21 +21,25 @@ const Profiles = ({
         Loading
     </h1> : (
         <Fragment>
-            <Navbar />
             <h1 className="large text-primary">
                     Developers
                 </h1>
-                <p className="lead">
-                    <i className="fab fa-connectdevelop" /> Browse
-                </p>
-                <div className="profiles">
+                <List className="profiles" style={{
+                marginTop: '0px',
+                position: "fixed",
+                width: '600px',
+                marginRight: '10%',
+                maxHeight: '400px',
+                overflow: 'auto'}}
+                >
                     {profiles.length > 0 ? (
                         profiles.map(profile => (
+                            <ListItem>
                             <ProfileItem key={profile._id} profile={profile} />
+                            </ListItem>
                         ))
                     ) : (<h4>No Profiles found...</h4>)}
-                </div>
-                <Footer />
+                </List>
         </Fragment>
     )
 }

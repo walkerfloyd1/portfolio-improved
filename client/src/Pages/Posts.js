@@ -13,7 +13,7 @@ import ListItem from '@material-ui/core/ListItem';
 
 import Grid from '@material-ui/core/Grid';
 
-import Container from '@material-ui/core/Container';
+import Profiles from '../Components/social/profiles/Profiles';
 
 // Make it so comments only show up if you click on Comments
 
@@ -73,7 +73,10 @@ const Posts = ({
                     </ListItem>
                 ))}
             </List>
-            </Grid>  
+            </Grid>
+            <Grid item md={6}>
+                <Profiles />
+            </Grid>
         </Grid>
         <Footer />
     </div>

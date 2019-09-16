@@ -31,7 +31,9 @@ const PostItem = ({
         <div className="post bg-white p-1 my-1">
           <div>
             <Link to={`/profile/${user}`}>
-              <h4>{name}</h4>
+              <h4 style={{
+                color: "black",
+              }}>{name}</h4>
             </Link>
           </div>
           <div>
