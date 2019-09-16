@@ -20,7 +20,6 @@ const UserSchema = new mongoose.Schema({
         type: Date,
         default: Date.now
     }
-    //image will go here
 });
 
 module.exports = User = mongoose.model('user', UserSchema);

@@ -8,6 +8,9 @@ import CommentItem from '../Components/social/post/CommentItem';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+
 // Make it so comments only show up if you click on Comments
 
 const Posts = ({
@@ -39,9 +42,12 @@ const Posts = ({
                 <i className="fas fa-user" /> See who's posting!
             </p>
             <PostForm />
-            <div className="posts">
+            <List className="posts" style={{
+                maxHeight: '200px',
+                overflow: 'auto'
+            }}>
                 {posts.map(post => (
-                    <div>
+                    <ListItem>
                     <PostItem key={post._id} post={post} />
                     {displayComments && 
                     <div className="comments">
@@ -49,9 +55,9 @@ const Posts = ({
                         <CommentItem key={comment._id} comment={comment} postId={post._id} />
                         ))}
                     </div> }
-                    </div>
+                    </ListItem>
                 ))}
-            </div>
+            </List>
         </Fragment>
         <Footer />
     </div>
