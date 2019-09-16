@@ -23,17 +23,14 @@ const UserProfile = ({
     }, [getProfileById])
     return (
         <Fragment>
-            {profile === null ? loading ? <h1> Loading </h1> :
-            <div>
-            <Navbar />
+            {profile === null || loading ? 
             <Link to="/create-profile" className="btn btn-light">
                 Create your Profile
-            </Link>
-            <Footer />
-            </div> : <Fragment>
+            </Link> :
+            <Fragment>
             <Navbar />
             <Link to="/posts" className="btn btn-light">
-                Back to Community
+                Back to Profiles
             </Link>
             {auth.isAuthenticated && auth.loading === false && auth.user._id === profile.user._id 
             && (
