@@ -11,6 +11,9 @@ const PostForm = ({
 
     return (
         <div class="post-form">
+          <h1>
+             Post
+          </h1>
         <form class="form my-1" onSubmit={e => {
             e.preventDefault();
             addPost({ text });

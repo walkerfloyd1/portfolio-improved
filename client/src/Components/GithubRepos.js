@@ -11,7 +11,7 @@ const GithubRepos = ({ getGithubRepos, repos}) => {
     }, [getGithubRepos]);
     return (
         <Grid container 
-        className="profile-github" 
+        className="profile" 
         direction="column"
         align="center"
         justify="center"

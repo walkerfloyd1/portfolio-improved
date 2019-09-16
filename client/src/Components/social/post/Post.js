@@ -17,7 +17,7 @@ const Post = ({ getPost, post: {
     return loading || post === null ? <h1>Loading</h1> : (
         <Fragment>
             <Link to='/posts' className='btn'>
-                Back to Posts
+                Back to Community
             </Link>
             <PostItem post={post} showActions={false} />
             <CommentForm postId={post._id} />

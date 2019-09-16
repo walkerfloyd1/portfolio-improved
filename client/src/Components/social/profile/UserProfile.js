@@ -32,9 +32,8 @@ const UserProfile = ({
             <Footer />
             </div> : <Fragment>
             <Navbar />
-                {/* //This is not working yet */}
-            <Link to="/profiles" className="btn btn-light">
-                Back to Profiles
+            <Link to="/posts" className="btn btn-light">
+                Back to Community
             </Link>
             {auth.isAuthenticated && auth.loading === false && auth.user._id === profile.user._id 
             && (

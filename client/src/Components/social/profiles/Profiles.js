@@ -21,15 +21,10 @@ const Profiles = ({
         Loading
     </h1> : (
         <Fragment>
-            <h1 className="large text-primary">
-                    Developers
-                </h1>
-                <List className="profiles" style={{
+                <List className="profiles-list" style={{
                 marginTop: '0px',
-                position: "fixed",
-                width: '600px',
-                marginRight: '10%',
-                maxHeight: '400px',
+                width: '400px',
+                maxHeight: '700px',
                 overflow: 'auto'}}
                 >
                     {profiles.length > 0 ? (

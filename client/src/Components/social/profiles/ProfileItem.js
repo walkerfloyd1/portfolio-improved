@@ -15,13 +15,10 @@ const ProfileItem = ({
     }
 }) => {
     return (
-        <div className="profile bg-light">
+        <div>
             <div>
-                <h2>{name}</h2>
-                <p>{bio}</p>
-                <p className="my-1">{location && <span>{location}</span>}</p>
                 <Link to={`/profile/${_id}`} className="btn btn-primary">
-                    View profile
+                {name}
                 </Link>
             </div>
             

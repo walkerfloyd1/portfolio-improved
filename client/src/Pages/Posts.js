@@ -41,26 +41,25 @@ const Posts = ({
         <Grid container
             direction="column"
             justify="center">
-            <h1 className="large text-primary" >
-                Community Feed
-            </h1>
             <Grid item md={6}>
+                
                 <PostForm style={{
-                    top: '25%',
+                    top: '50px',
                     position: 'fixed'
                 }}/>
-            </Grid>
-            <Grid item md={6}>
                 <List className="posts" style={{
                 marginTop: '0px',
                 position: "fixed",
-                top: '25%',
+                top: '50px',
                 left: '50%',
-                width: '600px',
+                width: '500px',
                 marginRight: '10%',
-                maxHeight: '400px',
+                maxHeight: '600px',
                 overflow: 'auto'
             }}>
+                <h1>
+                    Community Feed
+                </h1>
                 {posts.map(post => (
                     <ListItem>
                     <PostItem key={post._id} post={post} />
@@ -74,6 +73,9 @@ const Posts = ({
                 ))}
             </List>
             </Grid>
+            <h1>
+                Connect
+            </h1>
             <Grid item md={6}>
                 <Profiles />
             </Grid>
