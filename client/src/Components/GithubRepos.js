@@ -3,16 +3,36 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getGithubRepos } from './social/redux/profile';
 
+import Grid from '@material-ui/core/Grid';
+
 const GithubRepos = ({ getGithubRepos, repos}) => {
     useEffect(() => {
         getGithubRepos()
     }, [getGithubRepos]);
     return (
-        <div className="profile-github">
-           <h2 className="text-primary my-1">
-               Github
-            </h2> 
+        <Grid container 
+        className="profile-github" 
+        direction="column"
+        align="center"
+        justify="center"
+        >
+            <Grid item md={6} style={{
+                marginBottom: '20px'
+            }}>
+            <h1>
+                Github Repos
+            </h1>
+            </Grid>
+            <Grid item md={6} style={{
+                top: '50px',
+                marginBottom: '20px'
+            }}>
+            <div className="repo-container" style={{
+                    maxHeight: '400px',
+                    overflow: 'auto',
+                }}>
             {repos === null ? <h1>Loading</h1> : (
+                
                 repos.map(repo => (
                     <div key={repo._id} className="repo bg-white p-1 my-1">
                         <div>
@@ -42,6 +62,8 @@ const GithubRepos = ({ getGithubRepos, repos}) => {
                 ))
             )}
         </div>
+        </Grid>
+    </Grid>
     )
 }
 
