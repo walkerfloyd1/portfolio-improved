@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 class GithubRepos extends Component {
     constructor() {
@@ -6,6 +7,21 @@ class GithubRepos extends Component {
         this.state = {
             repos: [],
         }
+    }
+
+    componentDidMount() {
+        axios.get("https://api.github.com/users/walkerfloyd1/repos", headers: {
+            "Content-Type": "application/json"
+        })
+        .then(response => {
+            return response.json()
+        })
+        .then(data => {
+            console.log(data)
+        })
+        .catch(error => {
+            console.error(error)
+        })
     }
 
     render() {
