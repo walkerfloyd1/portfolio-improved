@@ -3,9 +3,13 @@ const express = require('express');
 const connectDB = require('./config/db.js');
 const path = require('path');
 
+const cors = require('cors');
+
 const app = express();
 
 connectDB();
+
+app.use(cors());
 
 app.use(express.json({ extended: false }));
 app.use(express.static(path.join(__dirname, '/client/build')));
@@ -15,7 +19,10 @@ app.use('/api/auth', require('./routes/auth'));
 app.use('/api/profile', require('./routes/profile'));
 app.use('/api/posts', require('./routes/posts'));
 
-
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+  });
 
 if(process.env.NODE_ENV === 'production') {
     //set static folder

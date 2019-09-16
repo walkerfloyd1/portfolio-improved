@@ -23,7 +23,7 @@ const Routes = props => {
         <Switch>
           <PrivateRoute exact path="/about" component={About} />
           <PrivateRoute exact path="/profile/:id" component={UserProfile} />
-          <PrivateRoute exact path="/portfolio" component={Portfolio} />
+          <Route exact path="/portfolio" component={Portfolio} />
           <PrivateRoute exact path="/posts" component={Posts} />
           <PrivateRoute exact path="/posts/:id" component={Post} />
           <PrivateRoute exact path="/film" component={Film} />
