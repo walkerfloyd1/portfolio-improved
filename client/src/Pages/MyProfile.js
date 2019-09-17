@@ -2,16 +2,17 @@ import React, { Component } from 'react';
 
 import Navbar from '../Components/Navbar';
 
-import UserProfile from '../Components/social/profile/UserProfile';
+import Dashboard from '../Components/social/dashboard/Dashboard';
 
-
+import Footer from '../Components/Footer';
 
 export default class MyProfile extends Component {
     render() {
       return (
         <div>
           <Navbar />
-            <UserProfile />
+            <Dashboard />
+          <Footer />
         </div>
       );
     }
