@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getProfileById } from '../redux/profile';
 
+import Spinner from '../../Spinner';
 
 import Navbar from '../../Navbar';
 
@@ -24,9 +25,7 @@ const UserProfile = ({
     return (
         <Fragment>
             {profile === null || loading ? 
-            <Link to="/create-profile" className="btn btn-light">
-                Create your Profile
-            </Link> :
+            <Spinner /> :
             <Fragment>
             <Navbar />
             <Link to="/posts" className="btn btn-light">

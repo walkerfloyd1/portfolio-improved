@@ -2,6 +2,7 @@ import { getCurrentProfile } from '../redux/profile';
 import React, { useEffect, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import Spinner from '../../Spinner';
 import { connect } from 'react-redux';
 
 const Dashboard = ({
@@ -18,15 +19,14 @@ const Dashboard = ({
         getCurrentProfile();
     }, [getCurrentProfile]);
 
-    return loading && profile === null ? <h1>Loading</h1> : <Fragment>
+    return loading && profile === null ? <Spinner /> : <Fragment>
         <p className="lead">
             <i className="fas fa-user"></i> Welcome { user && user.name}
         </p>
         {profile !== null ? <Fragment>
             <h1>{profile.bio}</h1>
-        </Fragment> : <Fragment>
-            You need to setup a profile!
-        </Fragment>}
+            <Link to="/create-profile" className="btn btn-primary"> If you don't have one, create a profile here</Link>
+        </Fragment> : <Spinner />}
     </Fragment>
 }
 
