@@ -4,6 +4,10 @@ import { connect } from 'react-redux';
 import { createProfile } from '../redux/profile';
 import { Link, withRouter } from 'react-router-dom';
 
+import Navbar from '../../Navbar';
+
+import Footer from '../../Footer';
+
 const CreateProfile = ({
     createProfile,
     history
@@ -46,6 +50,7 @@ const CreateProfile = ({
     }
     return (
         <Fragment>
+            <Navbar />
             <h1 className="large text-primary">
                 New Profile
             </h1>
@@ -133,6 +138,7 @@ const CreateProfile = ({
         </Fragment>}
         <input type="submit" className="btn btn-primary my-1" />
             </form>
+        <Footer />
         </Fragment>
     )
 }
