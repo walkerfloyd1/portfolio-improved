@@ -23,7 +23,6 @@ router.post('/', [
         name,
         email,
         password,
-        //image
     } = req.body;
 
     try {
@@ -42,7 +41,6 @@ router.post('/', [
         name,
         email,
         password,
-        //image
     })
     
     const salt = await bcrypt.genSalt(10);

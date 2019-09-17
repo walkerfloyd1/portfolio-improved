@@ -1,7 +1,5 @@
 const mongoose = require('mongoose');
 
-//TODO: Add ability to store user images to a profile
-
 const UserSchema = new mongoose.Schema({
     name: {
         type: String,
