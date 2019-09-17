@@ -17,7 +17,7 @@ import Nature from '../images/photography/nature.jpg';
 import Dock from '../images/photography/newpoint.jpg';
 import Sun from '../images/photography/sunnyday.jpg';
 
-export default class  ControlledCarousel extends Component {
+export default class PhotoCarousel extends Component {
   render () {
     return (
       <Carousel showThumbs={false} style={{
@@ -27,7 +27,7 @@ export default class  ControlledCarousel extends Component {
           <img src={Beaufort} />
           <div class="overlay">
               <p>McTeer Bridge</p>
-              <br></br>
+              <br />
               <p>Beaufort, SC</p>
           </div>
       </div>

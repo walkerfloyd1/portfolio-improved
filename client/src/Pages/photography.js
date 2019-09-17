@@ -4,7 +4,7 @@ import Footer from '../Components/Footer';
 
 import Navbar from '../Components/Navbar';
 
-import ControlledCarousel from '../Components/photoCarousel';
+import PhotoCarousel from '../Components/photoCarousel';
 
 import Grid from '@material-ui/core/Grid';
 
@@ -20,9 +20,11 @@ export default class Photo extends Component {
             alignItems="center"
             justify="center"
             >
-                <Grid item lg={9}><ControlledCarousel /></Grid>
-                </Grid>
-            <Footer />
+              <Grid item lg={9}>
+                <PhotoCarousel />
+              </Grid>
+            </Grid>
+          <Footer />
         </div>
       );
     }
