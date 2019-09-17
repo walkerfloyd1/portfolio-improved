@@ -6,68 +6,80 @@ import "../styles/carousel.css";
 
 import { Carousel } from 'react-responsive-carousel';
 
-import Beaufort from '../images/photography/beaufort.jpg';
-import Cake from '../images/photography/Cake.jpg';
-import Bridge from '../images/photography/Downtown-Bridge-yo.jpg';
-import Expanse from '../images/photography/expanse.jpg';
-import Fripp from '../images/photography/Fripp.jpg';
-import Houses from '../images/photography/houses.jpg';
-import Newpoint from '../images/photography/IMG_0140-1.jpg';
-import Nature from '../images/photography/nature.jpg';
-import Dock from '../images/photography/newpoint.jpg';
-import Sun from '../images/photography/sunnyday.jpg';
+import Beaufort from '../images/beaufort.jpg';
+import Cake from '../images/Cake.jpg';
+import Expanse from '../images/expanse.jpg';
+import Fripp from '../images/Fripp.jpg';
+import Bridge from '../images/Downtown-Bridge-yo.jpg';
+import Nature from '../images/nature.jpg';
+import Dock from '../images/newpoint.jpg';
+import Sun from '../images/sunnyday.jpg';
 
-export default class PhotoCarousel extends Component {
+export default class ControlledCarousel extends Component {
   render () {
     return (
-      <Carousel showThumbs={false} style={{
+      <Carousel showThumbs={true} style={{
         fontFamily: "Raleway, sans-serif",
       }}>
-      <div class="pic">
+      <div class="photo">
           <img src={Beaufort} />
-          <div class="overlay">
+          <div class="overlay-pic">
               <p>McTeer Bridge</p>
               <br />
               <p>Beaufort, SC</p>
+              <p>Canon 70D</p>
           </div>
       </div>
-      <div class="pic">
+      <div class="photo">
           <img src={Cake} />
-          <div class="overlay">Cake</div>
+          <div class="overlay-pic">
+              <p>Cake</p>
+              <br />
+              <p>Stanley, NC</p>
+              <p>Canon 70D</p></div>
       </div>
-      <div class="pic">
+      <div class="photo">
           <img src={Bridge} />
-          <div class="overlay">
+          <div class="overlay-pic">
               <p>South Carolina Summer</p>
+              <br />
+              <p>Beaufort, sc</p>
+              <p>Canon 70D</p>
           </div>
       </div>
-      <div class="pic">
+      <div class="photo">
           <img src={Expanse} />
-          <div class="overlay">Sunny Day in Boston</div>
+          <div class="overlay-pic">
+              <p>Sunny Day in Boston</p>
+              <br />
+              <p>Boston, MA</p>
+              <p>Canon 70D</p>
+              </div>
       </div>
-      <div class="pic">
+      <div class="photo">
           <img src={Fripp} />
-          <div class="overlay">Stormy Day at Fripp Island</div>
+          <div class="overlay-pic">
+              <p>Stormy Day at Fripp Island</p>
+              <br />
+              <p>Fripp Island, SC</p>
+              <p>Canon 70D</p></div>
       </div>
-      <div class="pic">
-          <img src={Houses} />
-          <div class="overlay">Summer</div>
-      </div>
-      <div class="pic">
-          <img src={Newpoint} />
-          <div class="overlay">Sunset in South Carolina</div>
-      </div>
-      <div class="pic">
+      <div class="photo">
           <img src={Nature} />
-          <div class="overlay">Home</div>
+          <div class="overlay-pic">
+              <p>Home</p>
+              <br />
+              <p>Beaufort, SC</p>
+              <p>Canon 70D</p>
+          </div>
       </div>
-      <div class="pic">
+      <div class="photo">
           <img src={Dock} />
-          <div class="overlay">Dock at Sunset</div>
+          <div class="overlay-pic">Dock at Sunset</div>
       </div>
-      <div class="pic">
+      <div class="photo">
           <img src={Sun} />
-          <div class="overlay">Sunny Day in Boston</div>
+          <div class="overlay-pic">Sunny Day in Boston</div>
       </div>
     </Carousel>
     )

@@ -5,8 +5,8 @@
 
 .carousel .slide img {
     border: 3px solid #0d0d0d;
-    height: 500px;  /* change this to whatever you want */
-    width: 600px;
+    height: 100%;
+    width: 60%;
 }
 
 .carousel .slide {
@@ -22,17 +22,15 @@
     background-color: transparent;
 }
 
-
-
-.overlay {
+.overlay-pic {
     position: fixed;
     top: 0;
     padding-top: 250px;
     background: rgb(0, 0, 0);
-    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    background: rgba(0, 0, 0, 0.5);
     color: #f1f1f1; 
     width: 100%;
-    height: 500px;
+    height: 100%;
     margin-left: auto;
     margin-right: auto;
     transition: .5s ease;
@@ -44,7 +42,7 @@
     justify-content: center;
   }
   
-  .pic:hover .overlay {
+  .photo:hover .overlay-pic {
     opacity: 1;
   }
 
