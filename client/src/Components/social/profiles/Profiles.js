@@ -24,7 +24,7 @@ const Profiles = ({
                 <List className="profiles-list" style={{
                 marginTop: '0px',
                 width: '400px',
-                maxHeight: '700px',
+                maxHeight: '200px',
                 overflow: 'auto'}}
                 >
                     {profiles.length > 0 ? (
