@@ -22,13 +22,12 @@ const Dashboard = ({
     return loading && profile === null ? <div><Spinner /></div> : <Fragment>
         <p className="lead">
             <i className="fas fa-user"></i> Welcome { user && user.name}
-            <Link to="create-profile">
+            <Link to="create-profile" className="btn btn-primary">
                 Create/Edit Your Profile
             </Link>
         </p>
         {profile !== null ? <Fragment>
             <h1>{profile.bio}</h1>
-            <Link to="/create-profile" className="btn btn-primary"> If you don't have one, create a profile here</Link>
         </Fragment> : <Spinner />}
     </Fragment>
 }
