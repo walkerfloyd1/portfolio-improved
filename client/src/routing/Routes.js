@@ -2,15 +2,15 @@ import React from 'react';
 import { Route, Switch } from 'react-router';
 import Alert from '../Components/Alert';
 import PrivateRoute from './PrivateRoute';
-import Portfolio from '../pages/portfolio';
-import About from '../pages/about';
-import Film from '../pages/filmmaking.js';
-import Photo from '../pages/photography.js';
+import Portfolio from '../webpages/portfolio';
+import About from '../webpages/about';
+import Film from '../webpages/filmmaking.js';
+import Photo from '../webpages/photography.js';
 import UserProfile from '../Components/social/profile/UserProfile';
-import MyProfile from '../pages/MyProfile';
+import MyProfile from '../webpages/MyProfile';
 import CreateProfile from '../Components/social/profile-forms/CreateProfile';
 import EditProfile from '../Components/social/profile-forms/EditProfile';
-import Posts from '../pages/Posts';
+import Posts from '../webpages/Posts';
 import Post from '../Components/social/post/Post';
 
 

@@ -4,11 +4,11 @@ import './App.css';
 
 import { Provider } from 'react-redux';
 
-import Register from './pages/register';
+import Register from './webpages/register';
 
-import Login from './pages/login';
+import Login from './webpages/login';
 
-import Landing from './pages/Landing';
+import Landing from './webpages/Landing';
 
 import Routes from './routing/Routes';
 
