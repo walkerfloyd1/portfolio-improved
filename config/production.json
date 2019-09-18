@@ -1,0 +1,6 @@
+{
+    "mongoURI": "mongodb+srv://walkerfloyd:walkerfloyd@cluster0-ndsnb.mongodb.net/test?retryWrites=true&w=majority",
+    "jwtSecret": "secretToken",
+    "githubClientId": "b161c7fa6b3ba4627896",
+    "githubSecret": "e1b93570e7391d989ba5bf0351565e056d755621"
+}
