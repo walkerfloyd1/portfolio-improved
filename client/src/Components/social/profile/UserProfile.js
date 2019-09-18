@@ -26,7 +26,7 @@ const UserProfile = ({
         <Fragment>
             {profile === null || loading ? 
             <div>
-                ><Spinner /> <Link to="/create-profile">
+                <Spinner /> <Link to="/create-profile">
                 Create Your Profile
             </Link>
             </div> :
