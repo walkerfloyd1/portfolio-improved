@@ -26,9 +26,7 @@ const UserProfile = ({
         <Fragment>
             {profile === null || loading ? 
             <div>
-                <Spinner /> <Link to="/create-profile">
-                Create Your Profile
-            </Link>
+            <Spinner /> 
             </div> :
             <Fragment>
             <Navbar />
