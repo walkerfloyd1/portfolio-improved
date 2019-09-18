@@ -19,9 +19,7 @@ const Dashboard = ({
         getCurrentProfile();
     }, [getCurrentProfile]);
 
-    return loading && profile === null ? <div><Spinner /> <Link to="create-profile">
-        Create/Edit Your Profile
-    </Link></div> : <Fragment>
+    return loading && profile === null ? <div><Spinner /></div> : <Fragment>
         <p className="lead">
             <i className="fas fa-user"></i> Welcome { user && user.name}
         </p>
