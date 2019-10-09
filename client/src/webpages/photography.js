@@ -13,12 +13,16 @@ export default class Photo extends Component {
     render() {
       return (
         <div>
-          <Navbar />
+          <Navbar/>
           <Grid container
             spacing={0}
             direction="column"
             alignItems="center"
             justify="center"
+            style={{
+              top: "10%",
+              position: "fixed"
+            }}
             >
               <Grid item lg={9}>
                 <ControlledCarousel />

@@ -23,6 +23,11 @@ class Film extends Component {
             direction="column"
             alignItems="center"
             justify="center"
+            style={{
+                top: "10%",
+                position: "fixed",
+                height: "100%"
+            }}
             >
                 <Grid item lg={9}>
             <Carousel showThumbs={false}>

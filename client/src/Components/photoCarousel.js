@@ -18,8 +18,10 @@ import Sun from '../images/sunnyday.jpg';
 export default class ControlledCarousel extends Component {
   render () {
     return (
-      <Carousel showThumbs={true} style={{
+      <Carousel showThumbs={false} style={{
         fontFamily: "Raleway, sans-serif",
+        paddingTop: "60px",
+        height: "400px"
       }}>
       <div class="photo">
           <img src={Beaufort} />

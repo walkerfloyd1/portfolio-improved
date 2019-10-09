@@ -20,7 +20,8 @@ class Bio extends Component {
                     <Grid item lg={6}>
                     <Container style={{
                         position: "relative",
-
+                        paddingTop: "25%",
+                        width: "80%",
                     }}>
                     <Image src={Profile} 
                     height={350}

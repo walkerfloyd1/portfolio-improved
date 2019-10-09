@@ -16,13 +16,7 @@ const GithubRepos = ({ getGithubRepos, repos}) => {
         align="center"
         justify="center"
         >
-            <Grid item md={6} style={{
-                marginBottom: '20px'
-            }}>
-            <h1>
-                Github Repos
-            </h1>
-            </Grid>
+            
             <Grid item md={6} style={{
                 top: '50px',
                 marginBottom: '20px'

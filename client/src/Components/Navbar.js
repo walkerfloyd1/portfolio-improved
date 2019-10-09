@@ -8,7 +8,6 @@ import { NavbarStyled } from '../Components/styling-components/NavbarComponent';
 
 const Navbar = ({
   auth: {
-    isAuthenticated,
     loading
   },
   logout 
@@ -53,26 +52,11 @@ const Navbar = ({
     </ul>
   )
 
-  const guestLinks = (
-    <ul>
-      <li>
-        <Link to="/register">
-          Register
-        </Link>
-      </li>
-      <li>
-        <Link to="/login">
-          Login
-        </Link>
-      </li>
-    </ul>
-  )
-
   return (
     <NavbarStyled>
       { !loading && (
         <Fragment>
-          {isAuthenticated ? authLinks : guestLinks }
+          { authLinks }
         </Fragment>
       )}
     </NavbarStyled>

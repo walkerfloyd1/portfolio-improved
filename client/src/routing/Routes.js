@@ -1,5 +1,5 @@
-import React from 'react';
-import { Route, Switch } from 'react-router';
+import React, { Fragment, useEffect} from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Alert from '../Components/Alert';
 import PrivateRoute from './PrivateRoute';
 import Portfolio from '../webpages/portfolio';
@@ -13,27 +13,45 @@ import EditProfile from '../Components/social/profile-forms/EditProfile';
 import Posts from '../webpages/Posts';
 import Post from '../Components/social/post/Post';
 
+import { Provider } from 'react-redux';
+
+import { loadUser } from '../Components/social/redux/auth';
+
+import setAuthToken from '../utils/setAuthToken';
+
+import store from '../store';
 
 import '../App.css';
 
 
-const Routes = props => {
+if (localStorage.token) {
+  setAuthToken(localStorage.token);
+}
+
+
+const Routes = () => {
+  useEffect(() => {
+    store.dispatch(loadUser());
+  }, [])
     return (
-        <section className="container">
-        <Alert />
+      <Provider store={store}>
+      <Router>
+        <Fragment>
         <Switch>
-          <PrivateRoute exact path="/about" component={About} />
+          <Route exact path="/about" component={About} />
           <PrivateRoute exact path="/profile/:id" component={UserProfile} />
-          <PrivateRoute exact path="/portfolio" component={Portfolio} />
+          <Route exact path="/portfolio" component={Portfolio} />
           <PrivateRoute exact path="/posts" component={Posts} />
           <PrivateRoute exact path="/posts/:id" component={Post} />
-          <PrivateRoute exact path="/film" component={Film} />
-          <PrivateRoute exact path="/photo" component={Photo} />
+          <Route exact path="/film" component={Film} />
+          <Route exact path="/photo" component={Photo} />
           <PrivateRoute exact path="/my-profile" component={MyProfile} />
           <PrivateRoute exact path="/create-profile" component={CreateProfile} />
           <PrivateRoute exact path="/edit-profile" component={EditProfile} />
         </Switch>
-      </section>
+        </Fragment>
+      </Router>
+      </Provider>
     )
 }
 

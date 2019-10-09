@@ -8,6 +8,8 @@ import Register from './webpages/register';
 
 import Login from './webpages/login';
 
+import About from './webpages/about';
+
 import Landing from './webpages/Landing';
 
 import Routes from './routing/Routes';
@@ -33,7 +35,8 @@ const App = () => {
       <Switch>
         <Route exact path="/register" component={Register} />
         <Route exact path="/login" component={Login} />
-        <Route exact path="/" component={Landing} />
+        <Route exact path="/" component={About} />
+        <Route exact path="/landing" component={Landing} />
         <Route component={Routes} />
       </Switch>
     </Fragment>
