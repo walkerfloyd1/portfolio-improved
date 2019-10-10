@@ -1,4 +1,5 @@
 import React, { Fragment, useEffect, useState } from 'react';
+import { Redirect } from "react-router-dom";
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getPosts } from '../Components/social/redux/post';
@@ -22,7 +23,8 @@ const Posts = ({
     post: {
         posts,
         loading
-    }
+    },
+    isAuthenticated
 }) => {
     useEffect(() => {
         getPosts();
@@ -33,9 +35,8 @@ const Posts = ({
     ] = useState(false);
 
 
-    return loading ? <h1>
-        Loading
-    </h1> : (
+    return (!isAuthenticated) ? 
+    <Redirect to="Landing" /> : (
     <div>
         <Navbar />
         <Grid container
