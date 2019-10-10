@@ -35,8 +35,8 @@ const App = () => {
       <Switch>
         <Route exact path="/register" component={Register} />
         <Route exact path="/login" component={Login} />
-        <Route exact path="/" component={About} />
-        <Route exact path="/landing" component={Landing} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/home" component={Landing} />
         <Route component={Routes} />
       </Switch>
     </Fragment>

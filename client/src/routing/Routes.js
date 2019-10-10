@@ -40,7 +40,7 @@ const Routes = () => {
         <Switch>
           <Route exact path="/about" component={About} />
           <PrivateRoute exact path="/profile/:id" component={UserProfile} />
-          <Route exact path="/portfolio" component={Portfolio} />
+          <PrivateRoute exact path="/portfolio" component={Portfolio} />
           <PrivateRoute exact path="/posts" component={Posts} />
           <PrivateRoute exact path="/posts/:id" component={Post} />
           <Route exact path="/film" component={Film} />

@@ -7,8 +7,8 @@ import { RegisterLinkStyled } from '../Components/styling-components/RegisterLin
 import { LoginLinkStyled } from '../Components/styling-components/LoginLinkComponent';
 
 const Landing = ({ isAuthenticated }) => {
-  if (!isAuthenticated) {
-    return <Redirect to="/profile" />
+  if (isAuthenticated) {
+    return <Redirect to="/about" />
   }
 
     return (
